@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         var bomberman = FindObjectOfType<BomberMan>();
         if (bomberman == null) return;
@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
         y = Mathf.Clamp(y, field.MinY + cameraHalfHeight, field.MaxY - cameraHalfHeight);
         transform.position = new Vector3(x, y, transform.position.z);
     }
-
+    */
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
