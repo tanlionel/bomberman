@@ -19,25 +19,6 @@ public class CameraController : MonoBehaviour
             MaxY = listOfStone.Max(x => x.transform.position.y) + 0.5f
         };
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        var bomberman = FindObjectOfType<BomberMan>();
-        if (bomberman == null) return;
-
-        float cameraHalfHeight = GetComponent<Camera>().orthographicSize;
-        float cameraHalfWidth = cameraHalfHeight * ((float)Screen.width / Screen.height);
-
-        var bombermanPosition = bomberman.transform.position;
-        var x = bombermanPosition.x;
-        var y = bombermanPosition.y;
-
-        x = Mathf.Clamp(x, field.MinX + cameraHalfWidth, field.MaxX - cameraHalfWidth);
-        y = Mathf.Clamp(y, field.MinY + cameraHalfHeight, field.MaxY - cameraHalfHeight);
-        transform.position = new Vector3(x, y, transform.position.z);
-    }
-
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
