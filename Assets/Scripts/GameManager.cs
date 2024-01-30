@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public GameObject[] players;
-    public GameObject[] Enemy;
+    public GameObject[] enemies;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public void CheckWinState()
     {
         int aliveCount = 0;
-
+        int enemyCount = 0;
         foreach (GameObject player in players)
         {
             if (player.activeSelf) {
@@ -29,7 +29,21 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (aliveCount <= 1) {
+        foreach (GameObject enemy in enemies)
+        {
+            if (enemy.activeSelf)
+            {
+                enemyCount++;
+            }
+        }
+
+        //LOSE
+        if (aliveCount <= 0) {
+            Invoke(nameof(NewRound), 3f);
+        }
+        //WIN
+        if (enemyCount <= 0)
+        {
             Invoke(nameof(NewRound), 3f);
         }
     }

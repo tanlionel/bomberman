@@ -56,14 +56,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Damage(int source)
+    /*public void Damage(int source)
     {
         if (source == 1)
         {
             Instantiate(DeathEffect, transform.position, transform.rotation);
             Destroy (gameObject);
         }
-    }
+    }*/
 
     // Update is called once per frame
     void Update()

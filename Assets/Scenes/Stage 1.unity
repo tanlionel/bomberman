@@ -169,7 +169,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players:
   - {fileID: 933875586}
-  Enemy: []
+  enemies:
+  - {fileID: 1983645468}
+  - {fileID: 1577067830}
+  - {fileID: 993592562}
 --- !u!1 &409565423
 GameObject:
   m_ObjectHideFlags: 0

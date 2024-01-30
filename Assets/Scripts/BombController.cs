@@ -101,7 +101,7 @@ public class BombController : MonoBehaviour
 
     public void AddBomb()
     {
-        if (MaxBombAmount < bombAmount)
+        if (MaxBombAmount > bombAmount)
         {
             bombAmount++;
             bombsRemaining++;
