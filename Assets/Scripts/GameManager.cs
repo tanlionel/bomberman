@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         //LOSE
         if (aliveCount <= 0)
         {
-            Invoke(nameof(NewRound), 3f);
+            Invoke(nameof(NewRoundWhenDead), 3f);
         }
         //WIN
         if (enemyCount <= 0)
@@ -57,8 +57,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void NewRoundWhenDead()
+    {
+        TrasitionSceneUI.Instance.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     private void NewRound()
     {
-        TrasitionSceneUI.Instance.LoadScene(sceneName[m_indexCurrentScene]);
+        Debug.Log("lose");
+        TrasitionSceneUI.Instance.LoadScene(sceneName[0]);
+        //SceneManager.LoadScene(sceneName[0]);
     }
 }

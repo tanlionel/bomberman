@@ -17,7 +17,7 @@ public class MenuUIManager : MonoBehaviour
     }
     private void OnButtonStartClick()
     {
-        TrasitionSceneUI.Instance.LoadScene("Stage 1");
+        TrasitionSceneUI.Instance.LoadScene("Stage 2");
     }
     private void OnButtonQuitClick()
     {
