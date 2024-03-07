@@ -809,6 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btStart: {fileID: 1552410818}
+  btPvP: {fileID: 1780158112}
   btQuit: {fileID: 1631627315}
 --- !u!1 &1419184762
 GameObject:

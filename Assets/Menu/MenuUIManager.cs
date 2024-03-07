@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MenuUIManager : MonoBehaviour
 {
     [SerializeField] private Button btStart;
+    [SerializeField] private Button btPvP;
     [SerializeField] private Button btQuit;
     private void Start()
     {
@@ -13,11 +14,17 @@ public class MenuUIManager : MonoBehaviour
             btStart.onClick.AddListener(OnButtonStartClick);
         if (btQuit != null)
             btQuit.onClick.AddListener(OnButtonQuitClick);
+        if(btPvP != null)
+            btPvP.onClick.AddListener(OnButtonPvPClick);
 
     }
     private void OnButtonStartClick()
     {
-        TrasitionSceneUI.Instance.LoadScene("Stage 2");
+        TrasitionSceneUI.Instance.LoadScene("Stage 1");
+    }
+    private void OnButtonPvPClick()
+    {
+        TrasitionSceneUI.Instance.LoadScene("Stage PvP");
     }
     private void OnButtonQuitClick()
     {

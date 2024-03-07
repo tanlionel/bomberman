@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Doanh/MenuScene.unity
+    path: Assets/Menu/MenuScene.unity
     guid: f2a9bb02f30db784581e6c5a939298e3
   - enabled: 1
     path: Assets/Scenes/Stage 2.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Stage PvP.unity
+    guid: 7d82706e2b947ff4d9b7fe3b69c9ba8c
   m_configObjects: {}
