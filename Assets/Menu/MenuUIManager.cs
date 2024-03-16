@@ -20,7 +20,7 @@ public class MenuUIManager : MonoBehaviour
     }
     private void OnButtonStartClick()
     {
-        TrasitionSceneUI.Instance.LoadScene("Stage 1");
+        TrasitionSceneUI.Instance.LoadScene("HelpScreen");
     }
     private void OnButtonPvPClick()
     {
